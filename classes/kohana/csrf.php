@@ -63,8 +63,6 @@ class Kohana_CSRF
             self::clear($name);
         }
 
-        $key = self::key($name);
-
-        return ( isset($values[$key]) && $values[$key] === $token );
+        return ( isset($values[$name]) && $values[$name] === $token );
     }
 }
